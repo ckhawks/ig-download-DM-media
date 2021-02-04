@@ -15,7 +15,6 @@ file_list = os.listdir(PATH)
 count = 0
 start = time.time() 
 for f in tqdm(file_list):
-    match = re.match(PATTERN, f)
     if re.search(PATTERN, f):
         os.remove(os.path.join(PATH, f))
         count += 1
